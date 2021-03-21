@@ -1,0 +1,584 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 51;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		79DDFA0B164876EB78E0A9DF /* Pods_VKontakte.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 32B251CDE5B54EDDDE2A035F /* Pods_VKontakte.framework */; };
+		F909ED8B25C496340037FCD1 /* PostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F909ED8A25C496340037FCD1 /* PostViewController.swift */; };
+		F911888C25C187E100CE947D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F911888B25C187E100CE947D /* AppDelegate.swift */; };
+		F911889525C187E600CE947D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F911889425C187E600CE947D /* Assets.xcassets */; };
+		F911889825C187E600CE947D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F911889625C187E600CE947D /* LaunchScreen.storyboard */; };
+		F91188A725C1891600CE947D /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F91188A625C1891600CE947D /* LoginViewController.swift */; };
+		F91188AA25C1895800CE947D /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F91188A925C1895800CE947D /* LoginView.swift */; };
+		F91538EC25D30280001CC250 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F91538EB25D30280001CC250 /* Coordinator.swift */; };
+		F957187825CC86500049376B /* FeedNavCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F957187725CC86500049376B /* FeedNavCoordinator.swift */; };
+		F957188525D012DD0049376B /* ProfileNavCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F957188425D012DD0049376B /* ProfileNavCoordinator.swift */; };
+		F957189125D0137B0049376B /* AnimatedTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F957189025D0137B0049376B /* AnimatedTabBarController.swift */; };
+		F9D95D0625C18CC100A30412 /* Styles.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9D95D0525C18CC100A30412 /* Styles.swift */; };
+		F9D95D0A25C18D1200A30412 /* SubviewsExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9D95D0925C18D1200A30412 /* SubviewsExtensions.swift */; };
+		F9D95D0D25C18DAE00A30412 /* UIImageExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9D95D0C25C18DAE00A30412 /* UIImageExtension.swift */; };
+		F9D95D1325C18E1B00A30412 /* LoginViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9D95D1225C18E1B00A30412 /* LoginViewDelegate.swift */; };
+		F9D95D1D25C2FB3800A30412 /* MainNavigationTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9D95D1C25C2FB3800A30412 /* MainNavigationTabBarController.swift */; };
+		F9D95D2225C2FB9B00A30412 /* FeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9D95D2125C2FB9B00A30412 /* FeedViewController.swift */; };
+		F9D95D3D25C371A500A30412 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9D95D3C25C371A500A30412 /* ProfileViewController.swift */; };
+		F9D95D4425C3723A00A30412 /* ProfileHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9D95D4325C3722F00A30412 /* ProfileHeaderView.swift */; };
+		F9D95D4725C3724300A30412 /* ProfileTableHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9D95D4625C3724300A30412 /* ProfileTableHeaderView.swift */; };
+		F9D95D4A25C3724900A30412 /* PhotosViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9D95D4925C3724900A30412 /* PhotosViewController.swift */; };
+		F9D95D6825C4209800A30412 /* PhotosCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9D95D6525C4209800A30412 /* PhotosCollectionViewCell.swift */; };
+		F9D95D6925C4209800A30412 /* PhotosTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9D95D6625C4209800A30412 /* PhotosTableViewCell.swift */; };
+		F9D95D6A25C4209800A30412 /* PostTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9D95D6725C4209800A30412 /* PostTableViewCell.swift */; };
+		F9D95D7025C420EF00A30412 /* Photo.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9D95D6D25C420EF00A30412 /* Photo.swift */; };
+		F9D95D7125C420EF00A30412 /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9D95D6E25C420EF00A30412 /* Post.swift */; };
+		F9D95D7225C420EF00A30412 /* PostDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9D95D6F25C420EF00A30412 /* PostDetail.swift */; };
+		F9D95D7725C4210600A30412 /* Storage.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9D95D7525C4210600A30412 /* Storage.swift */; };
+		F9D95D7825C4210600A30412 /* PhotoStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9D95D7625C4210600A30412 /* PhotoStorage.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		32B251CDE5B54EDDDE2A035F /* Pods_VKontakte.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_VKontakte.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		589BE2905799F2610884E0F1 /* Pods-VKontakte.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VKontakte.debug.xcconfig"; path = "Target Support Files/Pods-VKontakte/Pods-VKontakte.debug.xcconfig"; sourceTree = "<group>"; };
+		801B67DD64A00E542A8FCE74 /* Pods-VKontakte.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VKontakte.release.xcconfig"; path = "Target Support Files/Pods-VKontakte/Pods-VKontakte.release.xcconfig"; sourceTree = "<group>"; };
+		F909ED8A25C496340037FCD1 /* PostViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostViewController.swift; sourceTree = "<group>"; };
+		F911888825C187E100CE947D /* VKontakte.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VKontakte.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		F911888B25C187E100CE947D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		F911889425C187E600CE947D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		F911889725C187E600CE947D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		F911889925C187E600CE947D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F91188A625C1891600CE947D /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		F91188A925C1895800CE947D /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		F91538EB25D30280001CC250 /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
+		F957187725CC86500049376B /* FeedNavCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedNavCoordinator.swift; sourceTree = "<group>"; };
+		F957188425D012DD0049376B /* ProfileNavCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileNavCoordinator.swift; sourceTree = "<group>"; };
+		F957189025D0137B0049376B /* AnimatedTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimatedTabBarController.swift; sourceTree = "<group>"; };
+		F9D95D0525C18CC100A30412 /* Styles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Styles.swift; sourceTree = "<group>"; };
+		F9D95D0925C18D1200A30412 /* SubviewsExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubviewsExtensions.swift; sourceTree = "<group>"; };
+		F9D95D0C25C18DAE00A30412 /* UIImageExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageExtension.swift; sourceTree = "<group>"; };
+		F9D95D1225C18E1B00A30412 /* LoginViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewDelegate.swift; sourceTree = "<group>"; };
+		F9D95D1C25C2FB3800A30412 /* MainNavigationTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainNavigationTabBarController.swift; sourceTree = "<group>"; };
+		F9D95D2125C2FB9B00A30412 /* FeedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedViewController.swift; sourceTree = "<group>"; };
+		F9D95D3C25C371A500A30412 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		F9D95D4325C3722F00A30412 /* ProfileHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileHeaderView.swift; sourceTree = "<group>"; };
+		F9D95D4625C3724300A30412 /* ProfileTableHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileTableHeaderView.swift; sourceTree = "<group>"; };
+		F9D95D4925C3724900A30412 /* PhotosViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotosViewController.swift; sourceTree = "<group>"; };
+		F9D95D6525C4209800A30412 /* PhotosCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotosCollectionViewCell.swift; sourceTree = "<group>"; };
+		F9D95D6625C4209800A30412 /* PhotosTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotosTableViewCell.swift; sourceTree = "<group>"; };
+		F9D95D6725C4209800A30412 /* PostTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostTableViewCell.swift; sourceTree = "<group>"; };
+		F9D95D6D25C420EF00A30412 /* Photo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Photo.swift; sourceTree = "<group>"; };
+		F9D95D6E25C420EF00A30412 /* Post.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
+		F9D95D6F25C420EF00A30412 /* PostDetail.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostDetail.swift; sourceTree = "<group>"; };
+		F9D95D7525C4210600A30412 /* Storage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Storage.swift; sourceTree = "<group>"; };
+		F9D95D7625C4210600A30412 /* PhotoStorage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoStorage.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		F911888525C187E100CE947D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				79DDFA0B164876EB78E0A9DF /* Pods_VKontakte.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		BDCFF80598655806FCD93737 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				589BE2905799F2610884E0F1 /* Pods-VKontakte.debug.xcconfig */,
+				801B67DD64A00E542A8FCE74 /* Pods-VKontakte.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		C9FE57BEBAF7516502706E13 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				32B251CDE5B54EDDDE2A035F /* Pods_VKontakte.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		F909ED8325C43D650037FCD1 /* Post */ = {
+			isa = PBXGroup;
+			children = (
+				F909ED8A25C496340037FCD1 /* PostViewController.swift */,
+			);
+			path = Post;
+			sourceTree = "<group>";
+		};
+		F911887F25C187E100CE947D = {
+			isa = PBXGroup;
+			children = (
+				F911888A25C187E100CE947D /* VKontakte */,
+				F911888925C187E100CE947D /* Products */,
+				BDCFF80598655806FCD93737 /* Pods */,
+				C9FE57BEBAF7516502706E13 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		F911888925C187E100CE947D /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				F911888825C187E100CE947D /* VKontakte.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		F911888A25C187E100CE947D /* VKontakte */ = {
+			isa = PBXGroup;
+			children = (
+				F9D95D7425C4210600A30412 /* Storage */,
+				F9D95D6C25C420EF00A30412 /* Model */,
+				F9D95D0425C18CA800A30412 /* Helpers */,
+				F91188A225C1887300CE947D /* AppCoordinator */,
+				F9D95CFB25C18A4600A30412 /* Delegates */,
+				F91188A325C1888000CE947D /* Screens */,
+				F911889425C187E600CE947D /* Assets.xcassets */,
+				F911889625C187E600CE947D /* LaunchScreen.storyboard */,
+				F911889925C187E600CE947D /* Info.plist */,
+			);
+			path = VKontakte;
+			sourceTree = "<group>";
+		};
+		F91188A225C1887300CE947D /* AppCoordinator */ = {
+			isa = PBXGroup;
+			children = (
+				F957187725CC86500049376B /* FeedNavCoordinator.swift */,
+				F957188425D012DD0049376B /* ProfileNavCoordinator.swift */,
+				F957189025D0137B0049376B /* AnimatedTabBarController.swift */,
+				F9D95D1C25C2FB3800A30412 /* MainNavigationTabBarController.swift */,
+				F91538EB25D30280001CC250 /* Coordinator.swift */,
+			);
+			path = AppCoordinator;
+			sourceTree = "<group>";
+		};
+		F91188A325C1888000CE947D /* Screens */ = {
+			isa = PBXGroup;
+			children = (
+				F909ED8325C43D650037FCD1 /* Post */,
+				F9D95D2025C2FB7200A30412 /* Feed */,
+				F91188A525C188A800CE947D /* Profile */,
+				F91188A425C1889F00CE947D /* Login */,
+			);
+			path = Screens;
+			sourceTree = "<group>";
+		};
+		F91188A425C1889F00CE947D /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				F91188A625C1891600CE947D /* LoginViewController.swift */,
+				F91188A925C1895800CE947D /* LoginView.swift */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		F91188A525C188A800CE947D /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				F9D95D6425C4209800A30412 /* Cell */,
+				F9D95D4325C3722F00A30412 /* ProfileHeaderView.swift */,
+				F9D95D4925C3724900A30412 /* PhotosViewController.swift */,
+				F9D95D3C25C371A500A30412 /* ProfileViewController.swift */,
+				F9D95D4625C3724300A30412 /* ProfileTableHeaderView.swift */,
+			);
+			path = Profile;
+			sourceTree = "<group>";
+		};
+		F9D95CFB25C18A4600A30412 /* Delegates */ = {
+			isa = PBXGroup;
+			children = (
+				F911888B25C187E100CE947D /* AppDelegate.swift */,
+				F9D95D1225C18E1B00A30412 /* LoginViewDelegate.swift */,
+			);
+			path = Delegates;
+			sourceTree = "<group>";
+		};
+		F9D95D0425C18CA800A30412 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				F9D95D0525C18CC100A30412 /* Styles.swift */,
+				F9D95D0925C18D1200A30412 /* SubviewsExtensions.swift */,
+				F9D95D0C25C18DAE00A30412 /* UIImageExtension.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		F9D95D2025C2FB7200A30412 /* Feed */ = {
+			isa = PBXGroup;
+			children = (
+				F9D95D2125C2FB9B00A30412 /* FeedViewController.swift */,
+			);
+			path = Feed;
+			sourceTree = "<group>";
+		};
+		F9D95D6425C4209800A30412 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				F9D95D6525C4209800A30412 /* PhotosCollectionViewCell.swift */,
+				F9D95D6625C4209800A30412 /* PhotosTableViewCell.swift */,
+				F9D95D6725C4209800A30412 /* PostTableViewCell.swift */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		F9D95D6C25C420EF00A30412 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				F9D95D6D25C420EF00A30412 /* Photo.swift */,
+				F9D95D6E25C420EF00A30412 /* Post.swift */,
+				F9D95D6F25C420EF00A30412 /* PostDetail.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		F9D95D7425C4210600A30412 /* Storage */ = {
+			isa = PBXGroup;
+			children = (
+				F9D95D7525C4210600A30412 /* Storage.swift */,
+				F9D95D7625C4210600A30412 /* PhotoStorage.swift */,
+			);
+			path = Storage;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		F911888725C187E100CE947D /* VKontakte */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F911889C25C187E600CE947D /* Build configuration list for PBXNativeTarget "VKontakte" */;
+			buildPhases = (
+				8E3ABB43D659C304AFE22A4F /* [CP] Check Pods Manifest.lock */,
+				F911888425C187E100CE947D /* Sources */,
+				F911888525C187E100CE947D /* Frameworks */,
+				F911888625C187E100CE947D /* Resources */,
+				3140BD95D48BFCC215159DCB /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = VKontakte;
+			productName = VKontakte;
+			productReference = F911888825C187E100CE947D /* VKontakte.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		F911888025C187E100CE947D /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1230;
+				LastUpgradeCheck = 1230;
+				TargetAttributes = {
+					F911888725C187E100CE947D = {
+						CreatedOnToolsVersion = 12.3;
+					};
+				};
+			};
+			buildConfigurationList = F911888325C187E100CE947D /* Build configuration list for PBXProject "VKontakte" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = F911887F25C187E100CE947D;
+			productRefGroup = F911888925C187E100CE947D /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				F911888725C187E100CE947D /* VKontakte */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		F911888625C187E100CE947D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F911889825C187E600CE947D /* LaunchScreen.storyboard in Resources */,
+				F911889525C187E600CE947D /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		3140BD95D48BFCC215159DCB /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-VKontakte/Pods-VKontakte-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-VKontakte/Pods-VKontakte-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-VKontakte/Pods-VKontakte-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		8E3ABB43D659C304AFE22A4F /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-VKontakte-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		F911888425C187E100CE947D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F957188525D012DD0049376B /* ProfileNavCoordinator.swift in Sources */,
+				F909ED8B25C496340037FCD1 /* PostViewController.swift in Sources */,
+				F91188A725C1891600CE947D /* LoginViewController.swift in Sources */,
+				F9D95D7725C4210600A30412 /* Storage.swift in Sources */,
+				F9D95D0625C18CC100A30412 /* Styles.swift in Sources */,
+				F9D95D4725C3724300A30412 /* ProfileTableHeaderView.swift in Sources */,
+				F9D95D6925C4209800A30412 /* PhotosTableViewCell.swift in Sources */,
+				F911888C25C187E100CE947D /* AppDelegate.swift in Sources */,
+				F91538EC25D30280001CC250 /* Coordinator.swift in Sources */,
+				F9D95D7225C420EF00A30412 /* PostDetail.swift in Sources */,
+				F9D95D0A25C18D1200A30412 /* SubviewsExtensions.swift in Sources */,
+				F9D95D7825C4210600A30412 /* PhotoStorage.swift in Sources */,
+				F9D95D4425C3723A00A30412 /* ProfileHeaderView.swift in Sources */,
+				F9D95D3D25C371A500A30412 /* ProfileViewController.swift in Sources */,
+				F9D95D4A25C3724900A30412 /* PhotosViewController.swift in Sources */,
+				F957189125D0137B0049376B /* AnimatedTabBarController.swift in Sources */,
+				F9D95D1D25C2FB3800A30412 /* MainNavigationTabBarController.swift in Sources */,
+				F9D95D7025C420EF00A30412 /* Photo.swift in Sources */,
+				F9D95D0D25C18DAE00A30412 /* UIImageExtension.swift in Sources */,
+				F91188AA25C1895800CE947D /* LoginView.swift in Sources */,
+				F9D95D6825C4209800A30412 /* PhotosCollectionViewCell.swift in Sources */,
+				F9D95D1325C18E1B00A30412 /* LoginViewDelegate.swift in Sources */,
+				F9D95D2225C2FB9B00A30412 /* FeedViewController.swift in Sources */,
+				F957187825CC86500049376B /* FeedNavCoordinator.swift in Sources */,
+				F9D95D6A25C4209800A30412 /* PostTableViewCell.swift in Sources */,
+				F9D95D7125C420EF00A30412 /* Post.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		F911889625C187E600CE947D /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F911889725C187E600CE947D /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		F911889A25C187E600CE947D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.3;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		F911889B25C187E600CE947D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		F911889D25C187E600CE947D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 589BE2905799F2610884E0F1 /* Pods-VKontakte.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 489JK8PZ4S;
+				INFOPLIST_FILE = VKontakte/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.lera.VKontakte;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		F911889E25C187E600CE947D /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 801B67DD64A00E542A8FCE74 /* Pods-VKontakte.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 489JK8PZ4S;
+				INFOPLIST_FILE = VKontakte/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.lera.VKontakte;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		F911888325C187E100CE947D /* Build configuration list for PBXProject "VKontakte" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F911889A25C187E600CE947D /* Debug */,
+				F911889B25C187E600CE947D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F911889C25C187E600CE947D /* Build configuration list for PBXNativeTarget "VKontakte" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F911889D25C187E600CE947D /* Debug */,
+				F911889E25C187E600CE947D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = F911888025C187E100CE947D /* Project object */;
+}
